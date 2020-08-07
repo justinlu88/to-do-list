@@ -1,0 +1,90 @@
+import React from 'react';
+import { useState } from "react"
+import './App.css';
+
+const App = () => {
+  const [tasks, setTasks] = useState(["Hello", "task2", "task3"])
+  return <div>
+    {tasks.map((e) => {
+      console.log(e)
+      return <h1>{e}</h1>
+    })}
+
+  </div>
+  // let numberOfClicks = 5
+  // return <h1> {numberOfClicks} </h1>
+
+
+}
+
+export default App
+
+
+
+
+
+
+
+
+
+
+
+
+// const App = () => {
+//   const [userInput, setUserInput] = useState("")
+//   const [myTask, setMyTask] = useState("")
+//   const [tasks, setTasks] = useState(["Wake up, Wash my face, Do my homework"])
+//   const inputHander = (eventData) => {
+//     setUserInput(eventData.target.value)
+//     console.log("changed to", eventData.target.value)
+//   }
+//   const addToList = () => {
+//     console.log(tasks)
+//     // setMyTask(myTask + userInput)
+//     // returning this back to blank on the input
+//     if (userInput === "") {
+//       console.log("free")
+//     } else {
+//       tasks.push(userInput)
+//     }
+//     console.log(tasks)
+//     setUserInput("")
+//   }
+//   const completedTask = () => {
+//     setMyTask()
+
+//   }
+
+//   const clearAll = () => {
+//     setMyTask("")
+//   }
+
+//   return <div>
+//     <div className="div1">
+//       <h1>
+//         {myTask}
+//       </h1>
+
+//       <input onChange={inputHander} value={userInput} />
+//       <button onClick={addToList}>add task</button>
+//     </div>
+
+//     <div className="whenCompleted">
+//       <h2>
+//         {tasks.join()}
+//       </h2>
+//     </div>
+//     <h3 className="initialTasks" >
+//       Click add text to add a task
+//       </h3>
+//     <h3 className="initialTasks">
+//       In order to cross off the task, just click on it
+//     </h3>
+
+//     <button onClick={clearAll}>
+//       Clear all Tasks
+//     </button>
+//   </div>
+// }
+
+// export default App;
